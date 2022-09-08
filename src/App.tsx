@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Signup from './Pages/Signup/Signup';
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          hello georg
+          <Signup/>
         </p>
         <a
           className="App-link"
