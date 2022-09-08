@@ -6,7 +6,7 @@ export default function Complete() {
     return (
         <section className={styles.body}>
             <header>
-                <img src={logo} alt="My Happy SVG" width="250px" />
+                <img src={logo} alt="My Happy SVG " width="250px" />
             </header>
             <h1 className={styles.signInTxt}>Thanks for signing up, Anette.</h1>
             <img src={qr} className={styles.imgtest} alt="logo" />
