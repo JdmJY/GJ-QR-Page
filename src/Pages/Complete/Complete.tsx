@@ -1,6 +1,6 @@
 import qr from '../../assets/tmp/qr.png';
 import logo from '../../assets/tmp/logo.svg';
-import styles from "./Complete.module.scss";
+import styles from './Complete.module.scss';
 
 export default function Complete() {
     return (
