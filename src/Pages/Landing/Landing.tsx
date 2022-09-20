@@ -46,6 +46,7 @@ export default function Landing() {
                     showForm ? 
 
                         <Form
+                            className={styles.form}
                             name="basic"
                             labelCol={{ span: 8 }}
                             wrapperCol={{ span: 16 }}
