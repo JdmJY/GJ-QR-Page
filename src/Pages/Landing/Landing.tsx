@@ -11,22 +11,24 @@ import { QrcodeAtom } from '../../Atoms/QrcodeAtom';
 import { ShowForm } from '../../Atoms/ShowForm';
 
 export default function Landing() {
+    const [form] = Form.useForm();
     const [signUpForm, setSignUpForm] = useRecoilState(SignUpForm)
     const [showForm, setShowForm] = useRecoilState(ShowForm)
     const [qrcode, setQrcode] = useRecoilState(QrcodeAtom)
-     
+
     const postMemberToCrm = (params: ISignup) => {
         axios.get<IComplete>('http://localhost:7140/api/QrCreateMember', {
             params: {
-              email: params.email,
-              firstname: params.firstName,
-              lastname: params.lastName,
-            }})
-        .then((res) => {
-            res.data.IsLoading = false;
-            setQrcode(res.data);
-            setShowForm(false);
+                email: params.email,
+                firstname: params.firstName,
+                lastname: params.lastName,
+            }
         })
+            .then((res) => {
+                res.data.IsLoading = false;
+                setQrcode(res.data);
+                setShowForm(false);
+            })
 
     };
 
@@ -35,25 +37,27 @@ export default function Landing() {
         postMemberToCrm(values);
     }
 
-    
+
     return (
         <div className={styles.center}>
 
-                    <img src={logo} alt="My Happy SVG " width="250px" />
-                    <p style={{fontSize: "36px"}}>Georg Jensen Collectors</p>
+            <img src={logo} alt="My Happy SVG " width="250px" />
+            <p style={{ fontSize: "36px" }}>Georg Jensen Collectors</p>
 
-                {
-                    showForm ? 
+            {
+                showForm ?
 
-                        <Form
-                            className={styles.form}
-                            name="basic"
-                            labelCol={{ span: 8 }}
-                            wrapperCol={{ span: 16 }}
-                            initialValues={{ remember: true }}
-                            onFinish={onSubmit}
-                            autoComplete="off"
-                        >
+                    <Form
+                        className={styles.form}
+                        // name="basic"
+                        // labelCol={{ span: 8 }}
+                        // wrapperCol={{ span: 16 }}
+                        initialValues={{ remember: true }}
+                        onFinish={onSubmit}
+                        autoComplete="off"
+                        form={form}
+                    >
+                        <div>
                             <Form.Item name="email" label="Email address">
                                 <Input />
                             </Form.Item>
@@ -64,16 +68,16 @@ export default function Landing() {
                                 <Input />
                             </Form.Item>
                             <Form.Item>
-                                <Space>
-                                    <Button type="primary" htmlType="submit" className={styles.submitButton}>
-                                        Submit
-                                    </Button>
-                                </Space>
+
+                                <Button type="primary" htmlType="submit" className={styles.submitButton}>
+                                    Submit
+                                </Button>
                             </Form.Item>
-                        </Form>
+                        </div>
+                    </Form>
                     :
                     <Complete />
-                }
+            }
         </div>
     )
 };
