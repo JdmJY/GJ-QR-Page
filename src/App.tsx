@@ -1,4 +1,4 @@
-import './App.css';
+import './App.module.scss';
 import Signup from './Pages/Signup/Signup';
 
 
@@ -6,7 +6,7 @@ import Signup from './Pages/Signup/Signup';
 function App() {
 
   return (
-      <Signup />
+      <Signup/>
   );
 }
 

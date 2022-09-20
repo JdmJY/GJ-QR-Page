@@ -1,5 +1,5 @@
 import styles from "./Signup.module.scss";
-import logo from '../../assets/tmp/logo.svg';
+import logo from '../../assets/tmp/GJ_MASTERBRAND_LOGO_WHITE_large.png';
 import { Button, Checkbox, Form, Input, Space, Spin } from 'antd';
 import { useRecoilState } from 'recoil';
 import { SignUpForm } from '../../Atoms/SignUpForm';
@@ -44,59 +44,45 @@ export default function Signup() {
 
     
     return (
-        <section style={{margin: 0}} className={styles.center}>
-            <div >
-                <header >
+        <div className={styles.center}>
+            <header>
                     <img src={logo} alt="My Happy SVG " width="250px" />
-                </header>
+                    <h1 >Become a Georg Jensen Member</h1>
+            </header>
+            <div>
+                {
+                    showForm ? 
+                    <div className={styles.input}>
 
-                <h1 >Become a Georg Jensen Member</h1>
-            </div>
-
-            {
-                showForm ? 
-                <div className={styles.input}>
-
-                    <Form
-                        form={form}
-                        layout="vertical"
-                        autoComplete="off"
-                        onFinish={onSubmit}
-                        // onFinishFailed={onFinishFailed}
-                    >
-                        <Form.Item name="email" label="Email address">
-                            <Input />
-                        </Form.Item>
-                        <Form.Item name="firstName" label="First Name">
-                            <Input />
-                        </Form.Item>
-                        <Form.Item name="lastName" label="Last Name">
-                            <Input />
-                        </Form.Item>
-                        <Form.Item>
-                            <Space>
-                                <Button type="primary" htmlType="submit">
-                                    Submit
-                                </Button>
-                            </Space>
-                        </Form.Item>
-                    </Form>
-
-                    <Checkbox onChange={CheckboxOnChange}>Yes, i want to receive marketing from Georg Jensen.</Checkbox>
-
-                    {/* <Button onClick={() => Signup(tmpSignupDetail)} style={{width: '200px', height: '50px',background: 'lightblue'}} type="primary" size="large">
-                        Become a Member
-                    </Button> */}
-
-                    </div>
-                :
-                <Complete />
-            }
-            {/* {qrcode.IsLoading ? <Spin tip="Loading..."/> : <Complete />} */}
-
-            
-            {/* <img src={qr} className={styles.imgtest} alt="logo" /> */}
-
-        </section>
+                        <Form
+                            form={form}
+                            layout="vertical"
+                            autoComplete="off"
+                            onFinish={onSubmit}
+                            // onFinishFailed={onFinishFailed}
+                        >
+                            <Form.Item name="email" label="Email address">
+                                <Input />
+                            </Form.Item>
+                            <Form.Item name="firstName" label="First Name">
+                                <Input />
+                            </Form.Item>
+                            <Form.Item name="lastName" label="Last Name">
+                                <Input />
+                            </Form.Item>
+                            <Form.Item>
+                                <Space>
+                                    <Button type="primary" htmlType="submit" className={styles.submitButton}>
+                                        Submit
+                                    </Button>
+                                </Space>
+                            </Form.Item>
+                        </Form>
+                        </div>
+                    :
+                    <Complete />
+                }
+            </div> 
+        </div>
     )
 };

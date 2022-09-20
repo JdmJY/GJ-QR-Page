@@ -1,17 +1,14 @@
 body {
-    background-image: url("../../assets/tmp/eCom-background-a.jpg");
+    background-color: #263040;
     font-family: "source-sans-pro-regular", "sans-serif";
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    text-align: center;
+    // color: #000000;
 }
 .bodyHeader{
     text-align: center;
     font-family:'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 60px;
-    background-color: #f7f7f5;
     margin: 0;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -26,7 +23,7 @@ body {
 .logo {
     text-align: center;
     margin: auto;
-    background-color: white;
+    // background-color: white;
     }
 .submitButton{
     padding: 15px 3rem 13px;
@@ -44,22 +41,22 @@ body {
     flex-direction: column;
     align-items: center;
 }
-a.button {
--webkit-appearance: button;
--moz-appearance: button;
-appearance: button;
+// a.button {
+// -webkit-appearance: button;
+// -moz-appearance: button;
+// appearance: button;
 
-padding: 15px 3rem 13px;
-    display: inline-block;
-    font-family: 'futura-pt-bold',sans-serif;
-    letter-spacing: 1px;
-    border: 1px solid #7bd1ff;
-    background: #a1deff;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
-}
-.imgtest {
-    width: 185px;
-    height: 185px;
-}
+// padding: 15px 3rem 13px;
+//     display: inline-block;
+//     font-family: 'futura-pt-bold',sans-serif;
+//     letter-spacing: 1px;
+//     border: 1px solid #7bd1ff;
+//     background: #a1deff;
+//     text-transform: uppercase;
+//     cursor: pointer;
+//     border-radius: 2px;
+// }
+// .imgtest {
+//     width: 185px;
+//     height: 185px;
+// }
