@@ -1,12 +1,12 @@
 import './App.module.scss';
-import Signup from './Pages/Signup/Signup';
+import Landing from './Pages/Landing/Landing';
 
 
 
 function App() {
 
   return (
-      <Signup/>
+      <Landing/>
   );
 }
 

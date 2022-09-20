@@ -1,29 +1,35 @@
-body {
-    background-color: #263040;
-    font-family: "source-sans-pro-regular", "sans-serif";
-    text-align: center;
-    // color: #000000;
-}
 .bodyHeader{
     text-align: center;
-    font-family:'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 60px;
+       /*Can be any text*/
+    
+    // font-weight: 300;
+    font-size: 36px;
     margin: 0;
     padding-top: 25px;
     padding-bottom: 25px;
 }
+.body {
+    font-size: 18px;
+    // font-family: "lovelyFont";
+}
 .center {
+    background-color: #263040;
     text-align: center;
     width: 25%;
     margin: auto;
     width: auto;
-    height: 500px; 
+    height: 100vh; 
 }
+// @font-face {
+//     font-family: "Futura regular";   /*Can be any text*/
+//     src: local("Futura regular"),
+//       url("../../assets/fonts/FuturaStd-Medium.otf") format("truetype");
+//   }
+
+
 .logo {
     text-align: center;
     margin: auto;
-    // background-color: white;
     }
 .submitButton{
     padding: 15px 3rem 13px;
@@ -36,11 +42,11 @@ body {
     cursor: pointer;
     border-radius: 2px;
 }
-.input {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+// .input {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
 // a.button {
 // -webkit-appearance: button;
 // -moz-appearance: button;

@@ -1,6 +1,6 @@
-import styles from "./Signup.module.scss";
+import styles from "./Landing.module.scss";
 import logo from '../../assets/tmp/GJ_MASTERBRAND_LOGO_WHITE_large.png';
-import { Button, Checkbox, Form, Input, Space, Spin } from 'antd';
+import { Button, Form, Input, Space, Spin } from 'antd';
 import { useRecoilState } from 'recoil';
 import { SignUpForm } from '../../Atoms/SignUpForm';
 import { ISignup } from '../../Models/ISignup';
@@ -10,18 +10,11 @@ import { IComplete } from '../../Models/IComplete';
 import { QrcodeAtom } from '../../Atoms/QrcodeAtom';
 import { ShowForm } from '../../Atoms/ShowForm';
 
-
-export default function Signup() {
+export default function Landing() {
     const [signUpForm, setSignUpForm] = useRecoilState(SignUpForm)
     const [showForm, setShowForm] = useRecoilState(ShowForm)
     const [qrcode, setQrcode] = useRecoilState(QrcodeAtom)
-    const [form] = Form.useForm();
-
-
-    const CheckboxOnChange = () => {
-        console.log("hello from checkbox onchange")
-      };
-    
+     
     const postMemberToCrm = (params: ISignup) => {
         axios.get<IComplete>('http://localhost:7140/api/QrCreateMember', {
             params: {
@@ -45,21 +38,20 @@ export default function Signup() {
     
     return (
         <div className={styles.center}>
-            <header>
+
                     <img src={logo} alt="My Happy SVG " width="250px" />
-                    <h1 >Become a Georg Jensen Member</h1>
-            </header>
-            <div>
+                    <p style={{fontSize: "36px"}}>Georg Jensen Collectors</p>
+
                 {
                     showForm ? 
-                    <div className={styles.input}>
 
                         <Form
-                            form={form}
-                            layout="vertical"
-                            autoComplete="off"
+                            name="basic"
+                            labelCol={{ span: 8 }}
+                            wrapperCol={{ span: 16 }}
+                            initialValues={{ remember: true }}
                             onFinish={onSubmit}
-                            // onFinishFailed={onFinishFailed}
+                            autoComplete="off"
                         >
                             <Form.Item name="email" label="Email address">
                                 <Input />
@@ -78,11 +70,9 @@ export default function Signup() {
                                 </Space>
                             </Form.Item>
                         </Form>
-                        </div>
                     :
                     <Complete />
                 }
-            </div> 
         </div>
     )
 };
