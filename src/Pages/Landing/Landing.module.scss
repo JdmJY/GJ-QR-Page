@@ -14,38 +14,66 @@
 }
 .center {
     background-color: #263040;
-    text-align: center;
-    width: 25%;
+    // display: flex;
+    // text-align: center;
+    // width: 25%;
     margin: auto;
     width: auto;
     height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .form {
-    display: flex;
-    justify-content: center;
-    
+    @media only screen and (min-width: 900px){
+        max-width: 40%;
+    }  
 }
-// @font-face {
-//     font-family: "Futura regular";   /*Can be any text*/
-//     src: local("Futura regular"),
-//       url("../../assets/fonts/FuturaStd-Medium.otf") format("truetype");
-//   }
-
 
 .logo {
     text-align: center;
     margin: auto;
+}
+
+.submitButton {
+   
+        width: 100%;
+        padding: 15px 10px 13px;
+        // display: inline;
+        background-color: #ACE3FF;
+        background: #ACE3FF;
+        font-size: 12px;
+        font-family: "FuturaBold";
+}
+
+.consent {
+    text-align: left;
+}
+
+.AntForm {
+    margin: 5%;
+    width: "50%";
+}
+
+.jonas {
+    @media only screen and (min-width: 900px){
+        
     }
-.submitButton{
-    padding: 15px 3rem 13px;
-    display: inline-block;
-    font-family: 'futura-pt-bold',sans-serif;
-    letter-spacing: 1px;
-    border: 1px solid #7bd1ff;
-    background: #a1deff;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 2px;
+
+    div[class*="ant-form-item-label"]{
+        min-width: 100px;
+    }
+    
+}
+
+@font-face {
+	font-family: 'FuturaBold';
+	src: url('../../assets/fonts/FuturaStd-Bold.otf'); 
+	src: 
+		local('Futura Bold'),
+		local('Futura Bold'),
+		url('../../assets/fonts/FuturaStd-Bold.otf') 
+		format('opentype');
 }
 // .input {
 //     display: flex;
