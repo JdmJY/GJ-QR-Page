@@ -1,6 +1,6 @@
 import './App.module.scss';
 import Landing from './Pages/Landing/Landing';
-
+import "antd/dist/antd.css"
 
 
 function App() {

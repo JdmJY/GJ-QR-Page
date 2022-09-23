@@ -14,7 +14,7 @@ root.render(
   
   <React.StrictMode>
       <RecoilRoot>
-        <Landing  />
+        <App />
       </RecoilRoot>
   </React.StrictMode>
 );

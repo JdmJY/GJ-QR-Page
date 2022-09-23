@@ -5,13 +5,20 @@ import { QrcodeAtom } from '../../Atoms/QrcodeAtom';
 import QRCode from 'react-qr-code';
 
 export default function Complete() {
-    const [qrcode] = useRecoilState(QrcodeAtom)  
+    const [qrcode, setQrcode] = useRecoilState(QrcodeAtom);
+    
     return (
         <div className={styles.body}>
             <div className={styles.center}>
-                <h1 className={styles.signInTxt}>Thanks for signing up, {qrcode.fullname}.</h1>
+                {
+                    qrcode.IsExistingMember ? <h1 className={styles.signInTxt}>Velkommen tilbage {qrcode.fullname}.</h1> : <h1 className={styles.signInTxt}>Velkommen til Georg Jensen {qrcode.fullname}.</h1>
+                }
+                
                  <QRCode value={qrcode.email} />
                 <div>({qrcode.email})</div>
+                <p>
+                    Vi har også sendt dig en e-mail med mere information.
+                </p>
             </div>
         </div> 
     )

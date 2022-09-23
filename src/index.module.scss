@@ -1,26 +1,4 @@
-body, p, h1, header, html * {
-  color: #ffffff;
-  font-family: "lovelyFont";
-  margin: 0;
-  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  //   sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-}
-// h1, header * {
-//   color: #7c2626;
-//   font-family: "lovelyFont";
-// }
-@font-face {
-	font-family: 'lovelyFont';
-	src: url('./assets/fonts/FuturaStd-Medium.otf'); 
-	src: 
-		local('Lovely Font'),
-		local('Lovely-Font'),
-		url('./assets/fonts/FuturaStd-Medium.otf') 
-		format('opentype');
-}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

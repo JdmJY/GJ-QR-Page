@@ -1,5 +1,6 @@
 export interface IComplete {
-    email: string;
+    email: string  ;
     fullname: string;
+    IsExistingMember: boolean;
     IsLoading: boolean;
 }
