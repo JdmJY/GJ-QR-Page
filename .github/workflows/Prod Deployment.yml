@@ -2,6 +2,8 @@ name: Prod CI/CD
 
 on:
   workflow_dispatch:
+    branches:
+        - Master
 
 jobs:
   build_and_deploy_job:
