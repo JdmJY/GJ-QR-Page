@@ -1,6 +1,6 @@
 import styles from "./Landing.module.scss";
 import logo from '../../assets/tmp/GJ_logo_light.png';
-import { Button, Checkbox, Form, Input, Space, Spin } from 'antd';
+import { Button, Checkbox, Form, Input, Spin } from 'antd';
 import { useRecoilState } from 'recoil';
 import { SignUpForm } from '../../Atoms/SignUpForm';
 import { ISignup } from '../../Models/ISignup';
@@ -10,11 +10,6 @@ import { IComplete } from '../../Models/IComplete';
 import { QrcodeAtom } from '../../Atoms/QrcodeAtom';
 import { ShowForm } from '../../Atoms/ShowForm';
 import { Loading } from "../../Atoms/Loading";
-
-const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
-  };
 
 export default function Landing() {
     const [form] = Form.useForm();
@@ -32,7 +27,7 @@ export default function Landing() {
     ">persondatapolitikken</a>;
 
     const postMemberToCrm = (params: ISignup) => {
-        console.log("Environment:" + process.env.NODE_ENV )
+        console.log(`Environment: ${process.env.NODE_ENV}` );
         if (endpoint == null) {
             console.log("Endpoint is not set");
             setLoading(false);
