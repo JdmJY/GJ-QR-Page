@@ -38,6 +38,7 @@ export default function Landing() {
                 email: params.email,
                 firstname: params.firstName,
                 lastname: params.lastName,
+                marketing: params.marketing,
                 birthdate : params.birthdate
             }
         })
@@ -73,16 +74,16 @@ export default function Landing() {
                         form={form}
                     >
                         <div className={styles.AntForm}>
-                            <Form.Item className={styles.jonas}  name="email" rules={[{ required: true, message: 'Indtast email adresse' }]}>
+                            <Form.Item className={styles.jonas} label="Email:" name="email" rules={[{ required: true, message: 'Indtast email adresse' }]}>
                                 <Input placeholder="Email adresse" />
                             </Form.Item>
-                            <Form.Item className={styles.jonas} name="firstName" rules={[{ required: true, message: 'Indtast fornavn' }]} >
+                            <Form.Item className={styles.jonas} label="Fornavn:" name="firstName" rules={[{ required: true, message: 'Indtast fornavn' }]} >
                                 <Input placeholder="Fornavn"/>
                             </Form.Item>
-                            <Form.Item className={styles.jonas} name="lastName"  rules={[{ required: true, message: 'Indtast efternavn' }]}>
+                            <Form.Item className={styles.jonas} label="Efternavn:" name="lastName"  rules={[{ required: true, message: 'Indtast efternavn' }]}>
                                 <Input placeholder="Efternavn"/>
                             </Form.Item>
-                            <Form.Item className={styles.jonas} name="birthdate" >
+                            <Form.Item className={styles.jonas} label="Fødselsdato:" name="birthdate" >
                                 <Input autoFocus={true} type="date"  placeholder="Fødselsdag"/>
                             </Form.Item>
                             <Form.Item   name="marketing" valuePropName="checked"  rules={[
