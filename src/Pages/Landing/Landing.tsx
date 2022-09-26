@@ -32,6 +32,7 @@ export default function Landing() {
     ">persondatapolitikken</a>;
 
     const postMemberToCrm = (params: ISignup) => {
+        console.log("Environment:" + process.env.NODE_ENV )
         if (endpoint == null) {
             console.log("Endpoint is not set");
             setLoading(false);

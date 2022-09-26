@@ -1,11 +1,11 @@
 import styles from './Complete.module.scss';
 import 'antd/es/spin/style/css';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { QrcodeAtom } from '../../Atoms/QrcodeAtom';
 import QRCode from 'react-qr-code';
 
 export default function Complete() {
-    const [qrcode, setQrcode] = useRecoilState(QrcodeAtom);
+    const qrcode = useRecoilValue(QrcodeAtom);
     
     return (
         <div className={styles.body}>
