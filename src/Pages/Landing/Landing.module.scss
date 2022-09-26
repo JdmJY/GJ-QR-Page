@@ -35,16 +35,24 @@
     margin: auto;
 }
 
-.submitButton {
+.submitButton.ant-btn-primary {
    
-        width: 100%;
-        padding: 15px 10px 13px;
+        // width: 100%;
+        // padding: 15px 10px 13px;
         // display: inline;
-        background-color: #ACE3FF;
-        background: #ACE3FF;
-        font-size: 12px;
-        font-family: "FuturaBold";
+        // background-color: #ACE3FF;
+        
+            padding: 15px 10px 13px;
+            background-color: #ACE3FF;
+            font-size: 12px;
+            font-family: FuturaBold;
+            background: #ACE3FF;
 }
+
+.ButtonText {
+    color: #000;
+}
+
 
 .consent {
     text-align: left;

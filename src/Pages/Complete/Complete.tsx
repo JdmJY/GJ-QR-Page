@@ -11,11 +11,11 @@ export default function Complete() {
         <div className={styles.body}>
             <div className={styles.center}>
                 {
-                    qrcode.IsExistingMember ? <h1 className={styles.signInTxt}>Velkommen tilbage {qrcode.fullname}.</h1> : <h1 className={styles.signInTxt}>Velkommen til Georg Jensen {qrcode.fullname}.</h1>
+                    qrcode.IsExistingMember ? <h1 className={styles.signInTxt}>Velkommen tilbage {qrcode.Fullname}.</h1> : <h1 className={styles.signInTxt}>Velkommen til Georg Jensen {qrcode.Fullname}.</h1>
                 }
                 
-                 <QRCode value={qrcode.email} />
-                <div>({qrcode.email})</div>
+                 <QRCode value={qrcode.Email} />
+                <div>({qrcode.Email})</div>
                 <p>
                     Vi har også sendt dig en e-mail med mere information.
                 </p>
