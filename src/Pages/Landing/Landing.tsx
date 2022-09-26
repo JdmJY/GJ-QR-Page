@@ -33,7 +33,7 @@ export default function Landing() {
 
     const postMemberToCrm = (params: ISignup) => {
         if (endpoint == null) {
-            console.log("Backendpoint is not set");
+            console.log("Endpoint is not set");
             setLoading(false);
             return;
         }
@@ -55,13 +55,11 @@ export default function Landing() {
     };
 
     function onSubmit(values: ISignup) {
-        // event.currentTarget.disabled = true;
         setLoading(true);
         setSignUpForm(values);
         postMemberToCrm(values);
     }
 
-// onBlur={(e) => (e.target.type = "text")} onFocus={(e) => (e.target.type = "date")}
     return (
         <div className={styles.center}>
 
@@ -72,11 +70,7 @@ export default function Landing() {
                 showForm ?
 
                     <Form
-                        // {...layout}
                         className={styles.form}
-                        // name="basic"
-                        // labelCol={{ span: 8 }}
-                        // wrapperCol={{ span: 16 }}
                         initialValues={{ remember: true }}
                         onFinish={onSubmit}
                         autoComplete="off"
